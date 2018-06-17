@@ -1,0 +1,48 @@
+<!--
+Brandon Ko
+11 June 2018
+This html doc creates the layout for the extension popup
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RDB</title>
+  <h1>Random Buttons</h1>
+  <h6>Only for google.com</h6>
+  <link rel="stylesheet" href="style.css">
+  <script src="popup.js"></script>
+</head>
+<body>
+
+  <div>
+    <h3>Buttons!</h3>
+    <ul>
+      <li><button id="changeColor">Change</button><button id="reset">Reset</button></li>
+      <li><button id="runScript">Create Button!</button></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>Say Hi!</h3>
+    <form id="frm1" action="/action_page.php">
+      First name: <input type="text" name="fname"><br>
+      Last name: <input type="text" name="lname"><br>
+    </form>
+    <button id="submit">Thats my name!</button>
+  </div>
+
+  <div>
+    <h3>Run that JS!</h3>
+    <form id="injectForm" action="/action_page.php">
+      JS Script: <textarea type="text" name="script" placeholder="Enter the JavaScript code you would like to inject onto this web page. Do not encapsulate code in quotation marks."></textarea>
+    </form>
+    <button id="injectButton">&darr; I N J E C T &darr;</button>
+  </div>
+
+  <div>
+    <button id="addElement">Add an Element!</button>
+  </div>
+
+</body>
+</html>

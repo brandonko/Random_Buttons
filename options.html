@@ -1,0 +1,63 @@
+<!--
+  Brandon Ko
+  11 June 2018
+  Options page for the Random Buttons Extension
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  html, head, body{
+    height: auto;
+    width: auto;
+    text-align:left;
+    background-color: #ffffff;
+  }
+  div {
+    border: none;
+  }
+  fieldset{
+    width: 175px;
+    margin: 5px;
+  }
+  .square {
+    height: 30px;
+    width: 195px;
+    background-color: black;
+    border-color: black;
+    border: 3px;
+    margin: 10px;
+    margin-left: 5px;
+  }
+  button{
+    margin-left: 5px;
+  }
+</style>
+<script src="options.js"></script>
+<h1>Choose a different background color!</h1>
+</head> 
+<body>
+  Current Color: <output id="hex">#000000</output><br>
+  <div class="square" id="square"></div>
+  <fieldset>
+    <label for="r">R</label>
+    <input type="range" min="0" max="255" id="r" step="1" value="0">
+    <output for="r" id="r_out">0</output>
+  </fieldset>  
+
+  <fieldset>
+    <label for="g">G</label>
+    <input type="range" min="0" max="255" id="g" step="1" value="0">
+    <output for="g" id="g_out">0</output>
+  </fieldset>
+
+  <fieldset>
+    <label for="b">B</label>
+    <input type="range" min="0" max="255" id="b" step="1" value="0">
+    <output for="b" id="b_out">0</output>
+  </fieldset>  
+  <div id="buttonDiv"></div>
+</body>
+</html>

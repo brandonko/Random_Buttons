@@ -1,0 +1,33 @@
+/*
+Brandon Ko
+11 June 2018
+Manifest for the Random Buttons Chrome Extension
+*/
+
+{
+  "name": "Brandon's Random Buttons",
+  "version": "1.0",
+  "description": "Buttons that do stuff",
+  "permissions": ["activeTab", "declarativeContent", "storage", "bookmarks"],
+  "options_page": "options.html",
+  "background": {
+  	"scripts": ["background.js"],
+  	"persistent": false
+  },
+  "page_action": {
+  	"default_popup": "popup.html",
+  	"default_icon": {
+        "16": "images/rdb16.png",
+        "32": "images/rdb32.png",
+        "48": "images/rdb48.png",
+        "128": "images/rdb128.png"
+  	}
+  },
+  "icons": {
+      "16": "images/rdb16.png",
+      "32": "images/rdb32.png",
+      "48": "images/rdb48.png",
+      "128": "images/rdb128.png"
+	},
+  "manifest_version": 2
+}
