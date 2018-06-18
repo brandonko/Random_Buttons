@@ -8,7 +8,7 @@ Manifest for the Random Buttons Chrome Extension
   "name": "Brandon's Random Buttons",
   "version": "1.0",
   "description": "Buttons that do stuff",
-  "permissions": ["activeTab", "declarativeContent", "storage", "bookmarks"],
+  "permissions": ["activeTab", "declarativeContent", "storage", "bookmarks", "tabs"],
   "options_page": "options.html",
   "background": {
   	"scripts": ["background.js"],

@@ -16,7 +16,7 @@ This html doc creates the layout for the extension popup
 <body>
 
   <div>
-    <h3>Buttons!</h3>
+    <h3>Buttons</h3>
     <ul>
       <li><button id="changeColor">Change</button><button id="reset">Reset</button></li>
       <li><button id="runScript">Create Button!</button></li>
@@ -24,8 +24,8 @@ This html doc creates the layout for the extension popup
   </div>
 
   <div>
-    <h3>Say Hi!</h3>
-    <form id="frm1" action="/action_page.php">
+    <h3>Say Hi :)</h3>
+    <form id="frm1">
       First name: <input type="text" name="fname"><br>
       Last name: <input type="text" name="lname"><br>
     </form>
@@ -34,15 +34,24 @@ This html doc creates the layout for the extension popup
 
   <div>
     <h3>Run that JS!</h3>
-    <form id="injectForm" action="/action_page.php">
+    <form id="injectForm">
       JS Script: <textarea type="text" name="script" placeholder="Enter the JavaScript code you would like to inject onto this web page. Do not encapsulate code in quotation marks."></textarea>
     </form>
     <button id="injectButton">&darr; I N J E C T &darr;</button>
   </div>
 
   <div>
-    <button id="addElement">Add an Element!</button>
+    <h3>Webpage Elements</h3>
+    Webpage Element ID:
+    <form id="elementIDform">
+      <input id="idBox" style="width: 180px" text="asdf" type="text" placeholder="Enter ID of HTML element">
+      <button class="plainButton" id="setID">Set ID</button>
+    </form>
+    <button id="addElement">+ add +</button>
+    <button id="removeElement">- remove -</button>
   </div>
-
-</body>
-</html>
+  <div>
+    <h3>Testing Button</h3>
+    <button id="testButton">&delta; Run Test &delta;</button>
+  </body>
+  </html>

@@ -7,8 +7,7 @@ Background for chrome plugin, allows plugin usage on google.com only
 'use strict';
 
 chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({color: '#c3ffff'}, function() {
-  });
+  chrome.storage.sync.set({color: '#c3ffff'}, function() {});
 
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{

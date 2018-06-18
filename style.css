@@ -7,7 +7,7 @@ This is the style sheet for the Random Buttons extension
 */
 html {
   height: auto;
-  width: 280px;
+  width: 270px;
   font-style: oblique;
 }
 head {
@@ -98,6 +98,7 @@ div {
   margin-top: 25px;
   padding: 10px;
   border: 1px solid black;
+  width: 250px;
 }
 ul {
   list-style: none;
@@ -110,6 +111,24 @@ textarea{
   height: 50px;
 }
 input{
-  width: 200px;
+  width: 230px;
   height: auto;
+}
+.plainButton{
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0px;
+  border: 0;
+  box-shadow: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 300;
+  height: 1.2rem;
+  letter-spacing: 0rem;
+  line-height: 1rem;
+  outline: none;
+  padding: 0 0 0 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+  white-space: nowrap;
 }

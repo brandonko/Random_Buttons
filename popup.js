@@ -37,7 +37,7 @@ window.onload = function () {
 	let runScript = $('runScript');
 	runScript.addEventListener('click', function() {
 		chrome.tabs.executeScript(
-			{file: 'runScript.js'});
+			{file: 'scripts/runScript.js'});
 	});
 
 	let submit = $('submit');
@@ -56,14 +56,38 @@ window.onload = function () {
 	injectButton.addEventListener('click', function() {
 		var x = $('injectForm');
 		var str = x.elements[0].value;
-		var a = 'document.body.style.backgroundColor = "orange"';
 		chrome.tabs.executeScript(
 			{code: str});
 	});
 
+	//ID of the HTML element on the website that we are adding/removing elements from
+	let setID = $('setID')
+	setID.addEventListener('click', function() {
+		var x = $('elementIDform');
+		var idStr = x.elements[0].value;
+		chrome.storage.sync.set({ElementID: idStr}, function() {});
+		chrome.storage.sync.get(['ElementID'], function(res){
+			chrome.tabs.executeScript(
+				{code: 'console.log("ElementID is now: " + "'+res.ElementID+'")'})
+		})
+	})
+
 	let addElement = $('addElement');
 	addElement.addEventListener('click', function() {
 		chrome.tabs.executeScript(
-			{file: 'addElement.js'});
+			{file: 'scripts/addElement.js'});
+	});
+
+	let removeElement = $('removeElement');
+	removeElement.addEventListener('click', function() {
+		chrome.tabs.executeScript(
+			{file: 'scripts/removeElement.js'});
+	});
+
+	//Button for running test scripts
+	let testButton = $('testButton');
+	testButton.addEventListener('click', function() {
+		chrome.tabs.executeScript(
+			{file: 'scripts/testButton.js'});
 	});
 }
